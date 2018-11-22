@@ -1,0 +1,242 @@
+/**
+ * Starting with bootstrap definition
+ *
+ * @atom Buttons
+ * @section Button
+ * @modifiers
+ *  .btn for use in secondary action with/without icons
+ *   you can use bootstrap icons
+ *  .btn-primary for use in main action
+ * @markup
+ *  <button class="btn">a button</button>
+ *  <button class="btn"><span class="glyphicon glyphicon-cloud-download"></span> a button with icon</button>
+ *  <button class="btn btn-primary">a button primary</button>
+ */
+
+.btn {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    border: 1px solid $gray-light;
+    border-radius: 0;
+}
+
+.btn-primary {
+    background-color: $gold;
+    color: $white;
+    text-transform: uppercase;
+    transition: all 300ms;
+    border: 1px solid $gold;
+    &:hover,
+    &:focus,
+    &:active {
+        transition: all 300ms;
+        background-color: $gold-light;
+    }
+}
+
+// filters block
+.filters-input {
+    padding: 0 1em;
+}
+
+select {
+    width: 100%;
+}
+
+// select item
+.chosen-container-single {
+    .chosen-single {
+        border-radius: 0;
+        height: 40px;
+        padding-top: 7px;
+        background: $white;
+        div {
+            padding-top: 10px;
+        }
+        .search-choice-close {
+            margin-top: 10px;
+        }
+    }
+}
+
+.chosen-container-multi {
+    .chosen-choices {
+        min-height: 40px;
+        height: auto;
+    }
+}
+
+.home-table-line {
+    .details_cbx {
+        position: relative;
+        float: right;
+        margin-bottom: 15px;
+    }
+}
+
+input.filter {
+    border: 1px solid $gray-light;
+    outline: 0;
+    height: 40px;
+    width: 100%;
+    border-radius: 0;
+}
+
+form input.search-field {
+    width: 200px;
+    height: 25px;
+    margin-top: 10px;
+}
+
+/**
+ * Form actions area with responsive behaviours
+ *
+ * @molecule Button form area
+ * @section Form
+ * @markup
+ *  <div class="form-actions">
+ *      <button class="btn">a button</button>
+ *      <button class="btn btn-primary">a button primary</button>
+ *  </div>
+ */
+
+.form-actions {
+    background-color: $gray-table;
+    padding: 1em;
+    margin-top: 1em;
+    border-top: 1px solid $gold-dark;
+    &.form-inline {
+        .btn {
+            margin-bottom: 1em;
+            padding: 12px;
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+#saveTranslationsForm {
+    .text {
+        width: 100%;
+    }
+}
+
+.importstatus {
+    padding: 5px;
+    overflow: auto;
+}
+
+/**
+ * Form actions area with responsive behaviours
+ *
+ * @atom Input
+ * @section Form
+ * @markup
+ *  <div class="controls">
+ *      <input class="filter" name="code" value=""/> 
+ *  </div>
+ */
+
+.controls {}
+
+
+/**
+ * Select with autocomplete function
+ *
+ * @atom Select
+ * @section Form
+ * @markup
+ *  <div class="controls">
+ *      <select id="seasonFilter" name="season" class="filter">
+ *          <option value=""></option>
+ *          <option value="">Value to select</option>
+ *      </select>
+ *  </div>
+ */
+
+.filter {}
+
+/**
+ * Datapicker, you need to activate it by script jquery
+ *
+ * @atom Datapicker
+ * @section Form
+ * @markup
+ *  <div class="controls">
+ *      <div class="input-group">
+ *          <input type="text" id="styleAvailableFilter" name="styleavaildate" type="text" class="date-picker form-control" value=""/>
+ *          <label for="styleAvailableFilter" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>
+ *          </label>
+ *      </div>
+ *  </div>
+ * @script
+ *  $( "#styleAvailableFilter" ).datepicker({
+ *     dateFormat: "dd/mm/yy"
+ *  });
+ */
+
+ .date-picker {}
+
+/**
+ * Drag area for upload file, you need to activate it by script jquery
+ *
+ * @molecule Upload tool
+ * @section Form
+ * @markup
+ *  <div class="form-group">
+ *      <label class="control-label">Please select file to import:</label>
+ *      <div id="accountRecoFileImport"  class="upload-area">
+ *          <input type="file" name="importFile" id="importFile" />
+ *      </div>
+ *  </div>
+ * @script
+ *  var fileUploader = $("#accountRecoFileImport").uploadFile({
+ *       url:importAccountRecoUrl,
+ *       fileName:"importFile",
+ *       ...
+ */
+
+.upload-area {}
+
+/**
+ * @structure Form in page with error message
+ * @section Form
+ * @markup
+ *  <form id="filtersForm" action="" method="get">
+ *      <div class="row filters-input">
+ *          <div class="col-xs-12 col-md-4">
+ *              <label class="control-label" for="">Style Code</label>
+ *              @{include:.controls}
+ *              @{include:.text-danger}
+ *          </div>
+ *          <div class="col-xs-12 col-md-4">
+ *              <label class="control-label" for="">Country</label>
+ *              @{include:.filter}
+ *          </div>
+ *          <div class="col-xs-12 col-md-4">
+ *              <label class="control-label" for="">Date</label>
+ *              @{include:.date-picker}
+ *          </div>
+ *      </div>
+ *      @{include:.form-actions}
+ *  </form>
+ */
+
+#filtersForm {}
+
+/**
+ * add .hide class by default and remove it to show the message
+ * @atom Error message
+ * @section Messages
+ * @markup
+ *  <div class="text-danger require-msg" role="alert">@{lipsum:5:words}</div>
+ */
+.text-danger {}
+
+/**
+ * @atom Success message
+ * @section Messages
+ * @markup
+ *  <div class="text-success require-msg" role="alert">@{lipsum:5:words}</div>
+ */
+.text-success {}

@@ -1,0 +1,42 @@
+/** @color Gold dark 
+ * @section Golds */
+$gold-dark: #49443e;
+/** @color Gold
+ * @section Golds */
+ $gold: #c1b497;
+/** @color Gold light 
+ * @section Golds */
+$gold-light: #d3cab6;
+
+/** @color black
+* @section Basic colors */
+$black: #25211e;
+/** @color medium gray
+* @section Basic colors */
+$gray-medium: #666;
+/** @color gray
+* @section Basic colors */
+$gray: #808080;
+/** @color small gray
+* @section Basic colors */
+$gray-small: #999;
+/** @color light gray
+* @section Basic colors */
+$gray-light: #aaa;
+/** @color table gray
+* @section Basic colors */
+$gray-table: #e7e7e7;
+/** @color white
+ * @section Basic colors */
+$white: #fff;
+
+/**
+ * The relative path to the image assets folder.
+ *
+ * @nuclide Image-Folder
+ * @section Config > Paths
+ */
+$logo: url(images/logo-test.svg);
+/** @nuclide Image-Folder
+ * @section Config > Paths */
+$loading: url(/_ui/responsive/common/images/loading.gif);

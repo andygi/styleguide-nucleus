@@ -1,0 +1,104 @@
+/**
+ * Table from Bootstrap with responsive struscture
+ *
+ * @molecule Generic Responsive Table
+ * @section Table
+ * @markup
+ *  <div class="table-responsive">
+ *      <table class="tablet table-striped searchresult">
+ *          <thead>
+ *              <tr>
+ *                  <th>Style</th>
+ *              </tr>
+ *          </thead>
+ *          <tbody>
+ *              <tr>
+ *                  <td>value</td>
+ *              </tr>
+ *          </tbody>
+ *      </table>
+ *  </div>
+ */
+
+table {
+    &.searchresult {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 12px;
+        th {
+            background-color: $black;
+            color: $white;
+            font-weight: 100;
+            @extend %extend_1;
+        }
+        td {
+            @extend %extend_1;
+        }
+    }
+    &.filters {
+        border-collapse: collapse;
+        width: 80%;
+        th {
+            text-align: left;
+            padding: 8px;
+        }
+        td {
+            text-align: left;
+            padding: 8px;
+            &.filter-select {
+                vertical-align: top;
+            }
+        }
+    }
+    .modelattributes {
+        width: 25%;
+    }
+}
+
+.table-striped tbody > {
+    & tr:nth-child(odd) {
+        > td, > th {
+            background-color: $white;
+        }
+    }
+    & tr:nth-child(even) {
+        > td, > th {
+            background-color: $gray-table;
+        }
+    }
+}
+
+.sizeguide {
+    .styleImage {
+        width: 10%;
+        text-align: center;
+        img {
+            display: block !important; // because of some js
+            margin-bottom: 10px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+}
+
+.icon-img-ok {
+    @include icon("product_ok.png");
+}
+
+.icon-img-ko {
+    @include icon("product_nok.png");
+}
+
+/**
+ * Bootstrap sctructure, to use in case of sub menu page. No link required.
+ *
+ * @molecule Breadcrumb
+ * @section Navigation
+ * @markup
+ *  <ol class="breadcrumb">
+ *      <li>Home</li>
+ *      <li>Section</li>
+ *      <li class="active">Page Name</li>
+ *  </ol>
+ */
+ .breadcrumb {}

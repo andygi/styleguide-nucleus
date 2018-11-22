@@ -1,0 +1,16 @@
+{
+    "name": "test",
+    "version": "1.0",
+    "devDependencies": {
+        "grunt": "^1.0.3",
+        "grunt-contrib-clean": "^2.0.0",
+        "grunt-contrib-watch": "^1.1.0",
+        "grunt-run": "^0.8.1",
+        "grunt-sass": "^3.0.2",
+        "node-sass": "^4.10.0",
+        "nucleus-styleguide": "^1.1.1"
+    },
+    "dependencies": {
+        "grunt-open": "^0.2.3"
+    }
+}

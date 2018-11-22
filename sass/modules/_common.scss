@@ -1,0 +1,183 @@
+a {
+    color: inherit;
+    outline: 0 none;
+    &.editable-click {
+        border-bottom: none;
+        &:hover {
+            border-bottom: none;
+        }
+    }
+}
+
+.mb10 {
+    margin-bottom: 5px !important;
+}
+
+#page {
+    background: $white;
+    margin-top: 100px;
+    min-height: calc(100vh - 130px);
+    padding: 40px 40px 0 40px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    &.pagination {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        li {
+            display: inline;
+            a {
+                color: $black;
+                float: left;
+                padding: 8px 16px;
+                text-decoration: none;
+                &.active {
+                    background-color: $black;
+                    color: $white; //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+}
+
+.standard {
+    display: block;
+}
+
+.ui-autocomplete {
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1000 !important;
+}
+
+.custom-combobox {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-combobox-toggle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: -1px;
+    padding: 0;
+}
+
+.custom-combobox-input {
+    margin: 0;
+    padding: 5px 10px;
+}
+
+.localization {
+    text-decoration: none;
+    outline: none;
+    &:active img {
+        outline: none;
+        border: 0;
+    }
+}
+
+.editable-click {
+    border-bottom: none;
+}
+
+#divLoading {
+    display: none;
+    &.show {
+        display: block;
+        position: fixed;
+        z-index: 100;
+        background-image: $loading;
+        background-color: $gray-medium;
+        opacity: 0.4;
+        background-repeat: no-repeat;
+        background-position: center;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: 0;
+    }
+}
+
+.greylbl {
+    color: $gray-medium;
+    font-weight: bold;
+}
+
+.inlinereadonly {
+    text-decoration: none;
+    pointer-events: none;
+    cursor: default;
+}
+
+.langimgdisplay {
+    display: block;
+}
+
+.langimghide {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.searchresult {
+    .history-enabled {
+        display: inline;
+    }
+    .tracking-history {
+        display: inline;
+    }
+    .inlineedit {
+        display: block;
+    }
+    tr.disabled {
+        background-color: $gray;
+    }
+}
+
+.btnsearchreplace {
+    height: 50px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+user agent stylesheeta:-webkit-any-link {
+    text-decoration: underline;
+    cursor: auto;
+}
+
+nav ul {
+    list-style: none;
+}
+
+h5.searchrange {
+    float: left;
+    padding-left: 10px;
+    font-weight: 100;
+}
+
+div.paginationlayout {
+    padding: 10px;
+    text-align: right;
+    display: block;
+}
+
+.ui-widget-overlay {
+    background: $black;
+    opacity: 0.7;
+}
+
+.mrg-top-med {
+    margin-top: 1em;
+}

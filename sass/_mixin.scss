@@ -1,0 +1,26 @@
+// @extend-elements
+// original selectors
+// table.searchresult th, table.searchresult td
+%extend_1 {
+    text-align: left;
+    padding: 12px;
+    border: none;
+}
+
+/**
+ * Create icon eee
+ *
+ * @section Style Mixins
+ * @mixin icon($item)
+ * @param $item Image name with type
+ * @example
+ *  @include icon("product_ok.png");
+ */
+
+@mixin icon($item) {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("/images/" + $item) no-repeat;
+    background-size: cover;
+}

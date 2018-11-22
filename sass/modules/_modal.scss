@@ -1,0 +1,73 @@
+.tracking-history-modal,
+.localization-modal,
+.service-modal {
+    width: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+    position: fixed !important;
+}
+
+.ajax-upload-dragdrop {
+    height: 40%;
+}
+
+.ui-dialog-buttonpane {
+    .ui-button {
+        background-color: $gold;
+        color: $white;
+        text-transform: uppercase;
+        transition: all 300ms;
+        border: 1px solid $gold;
+        border-radius: 0;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+    }
+}
+
+/**
+ * Modal used for Size Guide
+ * @structure Modal bootstrap
+ * @section Modal
+ * @markup
+ *  <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#size-guide-overlay-1">
+ *      open modal
+ *  </button>
+ *  <div class="modal fade size-guide-overlay" id="size-guide-overlay-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+ *      <div class="modal-dialog" role="document">
+ *          <div class="modal-content">
+ *              <div class="modal-header">
+ *                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ *                      <span aria-hidden="true">&times;</span>
+ *                  </button>
+ *                  <h4 class="modal-title" id="myModalLabel">Title</h4>
+ *              </div>
+ *              <div class="modal-body">
+ *                  @{lipsum:50:words}
+ *              </div>
+ *          </div>
+ *      </div>
+ *  </div>
+ */
+.modal {}
+
+/**
+ * Modal used for all forms 
+ * @structure Dialog JqueryUi
+ * @section Modal
+ * @markup
+ *  <button type="button" class="btn" id="exportStyles"><span class="glyphicon glyphicon-cloud-download"></span> Export Styles</button>
+ *  <div id="exportConcessionStylesDialog" title="Export Concession Styles" style="display: none">
+ *      @{lipsum:50:words}
+ *      <div id="exportstatus" class="importstatus"></div>
+ *  </div>
+ * @script
+ *  $('#exportStyles').click(function(){
+ *      $("#exportConcessionStylesDialog").dialog({
+ *          classes: {
+ *              "ui-dialog": "ui-corner-all service-modal"
+ *          }
+ *      }).dialog("open");
+ *  });
+ */
+
+#exportStyles{}

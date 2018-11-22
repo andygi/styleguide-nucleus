@@ -1,0 +1,16 @@
+#footer-main {
+    font-style: normal;
+    font-weight: 600;
+    background: $black;
+    color: $gray-small;
+    width: 100%;
+    p {
+        margin-bottom: 0;
+        padding: 10px;
+        text-align: right;
+        &.copyright {
+            font-size: 10px;
+            color: $gray-small;
+        }
+    }
+}
